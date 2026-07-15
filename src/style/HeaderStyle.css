@@ -1,0 +1,134 @@
+/* ===========================
+   Cabeçalho
+=========================== */
+
+.cabecalho{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    z-index:1000;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.logo img{
+
+    height:55px;
+    width:auto;
+
+}
+
+/* ===========================
+   Menu
+=========================== */
+
+.menu{
+
+    display:flex;
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    position:relative;
+
+}
+
+/* Linha animada */
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#d62828;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:#d62828;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   Responsividade
+=========================== */
+
+@media (max-width: 768px){
+
+    .cabecalho{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .menu{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+}

@@ -1,0 +1,122 @@
+---
+import '../style/FooterStyle.css';
+---
+
+
+<footer class="rodape">
+
+    <div class="conteudo-rodape">
+
+        <!-- Logo -->
+
+        <div class="coluna-rodape">
+
+            <img
+                src="/assets/global/Logo.jpg"
+                alt="Auto Prime"
+                class="logo-rodape"
+            />
+
+            <p>
+                Há mais de 20 anos oferecendo veículos de qualidade,
+                transparência e as melhores oportunidades para nossos clientes.
+            </p>
+
+        </div>
+
+        <!-- Navegação -->
+
+        <div class="coluna-rodape">
+
+            <h3>Navegação</h3>
+
+            <ul>
+
+                <li>
+                    <a href="#novos-modelos">
+                        Novos Modelos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#carros-populares">
+                        Carros Populares
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#venda-seu-usado">
+                        Venda seu Usado
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#saiba-mais">
+                        Saiba Mais
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contato -->
+
+        <div class="coluna-rodape">
+
+            <h3>Contato</h3>
+
+            <p>(11) 4000-1234</p>
+
+            <p>contato@autoprime.com.br</p>
+
+            <p>
+                Av. das Nações, 1250<br>
+                Centro - São Paulo/SP
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Auto Prime. Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Botões Flutuantes -->
+
+<div class="botoes-flutuantes">
+
+    <a
+        href="https://wa.me/5511999999999"
+        target="_blank"
+        class="botao-whatsapp"
+        aria-label="WhatsApp"
+    >
+        💬
+    </a>
+
+<button
+    id="botao-topo"
+    class="botao-topo"
+    aria-label="Voltar ao topo"
+>
+    ↑
+</button>
+
+</div>
+
+<script>
+    document.getElementById("botao-topo")?.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
