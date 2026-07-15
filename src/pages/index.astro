@@ -1,17 +1,82 @@
 ---
+import Layout from '../layout/GlobalLayout.astro';
 
+const carros = [
+  {
+    titulo: "Sedãs Premium",
+    descricao: "Conforto, tecnologia e desempenho para quem busca elegância em cada viagem.",
+    imagem: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600"
+  },
+  {
+    titulo: "SUVs",
+    descricao: "Espaço, segurança e potência para toda a família.",
+    imagem: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600"
+  },
+  {
+    titulo: "Esportivos",
+    descricao: "Performance e design para quem gosta de emoção ao dirigir.",
+    imagem: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600"
+  }
+];
 ---
+<Layout title="Carros dos Sonhos">
+<body>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <!-- Hero -->
+    <section class="secao-hero">
+
+        <div class="conteudo-hero">
+            <h1>Encontre o carro dos seus sonhos</h1>
+
+            <p>
+                Veículos novos e seminovos com garantia, financiamento facilitado
+                e as melhores condições do mercado.
+            </p>
+
+            <a href="#carros" class="botao-principal">
+                Ver ofertas
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Cards -->
+    <section class="secao-carros" id="carros">
+
+        <h2>Nossos Destaques</h2>
+
+        <div class="grade-carros">
+
+            {
+                carros.map((carro) => (
+
+                    <article class="card-carro">
+
+                        <img
+                            src={carro.imagem}
+                            alt={carro.titulo}
+                        />
+
+                        <div class="conteudo-card">
+
+                            <h3>{carro.titulo}</h3>
+
+                            <p>{carro.descricao}</p>
+
+                            <button>
+                                Saiba mais
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                ))
+            }
+
+        </div>
+
+    </section>
+
+</body>
+</Layout>
